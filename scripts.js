@@ -12,7 +12,9 @@ const init = () => {
 
       e.target.classList.toggle('gray');
 
-      if(e.target.classList.contains('plusException')) {
+      if(e.target.classList.contains('plusException') && square4.classList.contains('gray')) {
+        console.log(null);
+      } else if (e.target.classList.contains('plusException')) {
         square4.classList.remove('gray');
       } else if (square4 === null) {
         console.log(null);
@@ -20,7 +22,9 @@ const init = () => {
         square4.classList.toggle('gray');
       }
 
-      if(e.target.classList.contains('minusException')) {
+      if(e.target.classList.contains('minusException') && square3.classList.contains('gray')) {
+        console.log(null);
+      } else if(e.target.classList.contains('minusException')) {
         square3.classList.remove('gray');
       } else if (square3 === null) {
         console.log(null);
