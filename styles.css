@@ -1,0 +1,22 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameBoard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 55vw;
+}
+.square {
+  border: black 2px solid;
+  width: 10vw;
+  height: 18vh;
+}
+.gray {
+  background-color: gray;
+}
