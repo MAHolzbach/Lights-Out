@@ -1,8 +1,10 @@
 /*jshint esversion: 6 */
 
 const squares = document.getElementsByClassName('square');
+const newButton = document.getElementById('newButton');
 
-const init = () => {
+//IIFE for core functionality.
+(global => {
   for(let i = 0; i<squares.length; i++) {
     squares[i].addEventListener('click', function(e) {
       let square1 = document.getElementById(e.target.id - 5);
@@ -45,6 +47,22 @@ const init = () => {
       }
     });
   }
+})(window);
+//
+
+//New game button logic.
+const newGame = () => {
+  for(let i = 0; i<squares.length; i++) {
+    let color = Math.floor(Math.random() * 2);
+    if(color === 0) {
+      squares[i].classList.add('gray');
+    } else {
+      squares[i].classList.remove('gray');
+    }
+  }
 };
 
-init();
+newGame();
+
+newButton.addEventListener('click', newGame);
+//
