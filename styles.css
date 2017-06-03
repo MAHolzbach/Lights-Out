@@ -1,7 +1,20 @@
-.container {
-  height: 100%;
-  width: 100%;
+body {
+  background: #0099CC;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: 97vh;
+  width: 98vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: lightblue;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -10,7 +23,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  max-width: 55vw;
+  max-width:52vw;
+  background: white;
+  border: black 2px solid;
+  padding: 3px;
 }
 .square {
   border: black 2px solid;
