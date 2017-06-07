@@ -2,6 +2,8 @@
 
 const squares = document.getElementsByClassName('square');
 const newButton = document.getElementById('newButton');
+const moves = document.getElementById('moves');
+let moveIndex = 1;
 
 //IIFE for core functionality.
 (global => {
@@ -45,6 +47,9 @@ const newButton = document.getElementById('newButton');
       } else {
         square2.classList.toggle('gray');
       }
+
+      moves.textContent = moveIndex;
+      moveIndex++;
     });
   }
 })(window);
@@ -60,6 +65,8 @@ const newGame = () => {
       squares[i].classList.remove('gray');
     }
   }
+  moves.textContent = 0;
+  moveIndex = 1;
 };
 
 newGame();
